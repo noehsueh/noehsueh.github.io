@@ -1,0 +1,17 @@
+baseURL : 'http://example.org/'
+languageCode : 'en-uk'
+title : "Noe's website"
+theme: "PaperMod"
+
+params:
+  math: true
+
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: true
+    style: "monokai" # Replace with the style of your choice
