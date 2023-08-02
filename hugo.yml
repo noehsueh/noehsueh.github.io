@@ -1,10 +1,62 @@
+# config file
 baseURL : 'http://noehsueh.github.io/'
-languageCode : 'en-uk'
 title : "Noe's website"
 theme: "PaperMod"
+menu:
+  main:
+    - name: About Me
+      url : /aboutme/
+    - name: Posts
+      url: /posts
+
+# Language 
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    contentDir: content/en
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
+    weight: 1
+  es:
+    contentDir: content/es
+    disabled: true
+    languageCode: es
+    languageDirection: ltr
+    languageName: Spanish
+    # params:
+    #   subtitle: Reference, Tutorials, and Explanations
+    # title: Project Documentation
+    weight: 2
+
+
 
 params:
   math: true
+  defaultTheme: auto
+
+  homeInfoParams:
+      Title: "Hi there, I'm Noé."
+      Content: > 
+        Welcome to my website!
+
+        I am a Data Sciece student from Buenos Aires, Argentina. I'm interested 
+        in Machine Learning, Deep Learning and Statistics. You can find some 
+        info about me here as well as some notes I've taken for my classes.
+        
+
+  socialIcons: # optional
+      - name: twitter
+        url: "https://twitter.com/noe_hsueh"
+      - name: github
+        url: "https://github.com/noehsueh"
+      - name: linkedin
+        url: "https://www.linkedin.com/in/no%C3%A9-hsueh-9522b1267/"
+      - name: instagram
+        url: "https://www.instagram.com/noe_hsueh/"
+
 
 
 markup:
