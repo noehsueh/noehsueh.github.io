@@ -4,8 +4,11 @@ title : "Noe's website"
 theme: "PaperMod"
 menu:
   main:
-    - name: About Me
-      url : /aboutme/
+    - identifier: about
+      name: About Me
+      url : /aboutme
+    - name: Archive
+      url:  /archives
     - name: Posts
       url: /posts
 
@@ -36,15 +39,24 @@ languages:
 params:
   math: true
   defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  showtoc: true
+
+
 
   homeInfoParams:
       Title: "Hi there, I'm Noé."
       Content: > 
         Welcome to my website!
 
-        I am a Data Sciece student from Buenos Aires, Argentina. I'm interested 
-        in Machine Learning, Deep Learning and Statistics. You can find some 
-        info about me here as well as some notes I've taken for my classes.
+        I am a Data Sciece student from Argentina. You can find some 
+        info about me here as well as some posts and notes 
+        I've taken for my classes. You can find my contact information below.
         
 
   socialIcons: # optional
