@@ -5,8 +5,8 @@ draft: true
 ---
 
 
-- Temas
-  - Conjuntos nulos, sigmas álgebras, sigma álgebra de los conjuntos medibles
+{{< collapse summary="Temas" >}}
+- Conjuntos nulos, sigmas álgebras, sigma álgebra de los conjuntos medibles
   - Teorema de existencia de la medida de Lebesgue, propiedades de la medida de Lebesgue
   - Teorema de la continuidad de la medida
   - Funciones medibles, funciones simples
@@ -16,11 +16,9 @@ draft: true
   - Integral para funciones no negativa
   - Teorema (propiedades de la integral)
   - Teorema de la convergencia monótona
+{{< /collapse >}}
 
-<details>
-    <summary>Toggle Switch</summary>
-    Foldable Content
-</details>
+Notas preparadas para dar el final de la materia Análisis Avanzado - 2C del 2021.
 
 
 # 0. Introducción (5 min)
@@ -37,8 +35,14 @@ f(x)=\begin{cases}
 $$
 
 ![Screenshot 2022-02-27 at 18.44.04.png](resources/Screenshot_2022-02-27_at_18.44.04.png)
+<!-- 
+<img src="resources/Screenshot_2022-02-27_at_18.44.04.png" alt="" width="70%"/>
+ -->
 
-Esta función no es integrable según Riemann pero el objetivo será definir una integral para la cual la función anterior sí sea integrable. De esta forma, nos enfocaremos en extender la definición de integral. 
+
+
+
+Esta función no es integrable si usamos la definición de integral de Riemann pero el objetivo será definir una integral para la cual la función anterior sí sea integrable. De esta forma, nos enfocaremos en extender la definición de integral. 
 
 Previamente, veamos qué condiciones debería satisfacer esta definición de integral para que tenga sentido. La idea de la integral será, como en la integral de Riemann, integrar áreas bajo curvas, por lo que la integral de Lebesgue será una generalización de este concepto. 
 
@@ -141,9 +145,11 @@ $$
 
 Recordemos que queremos “medir” conjuntos, a través de una generalización de la longitud de intervalos. Como esta medida que definiremos solo aplicara para ciertos conjuntos y no **todos** los subconjuntos de $\R$, determinemos ahora qué es “eso” que vamos a poder medir.
 
-Def 1.2. Sigma-álgebra
 
-Sea $X$ **un conjunto y $\mathcal{A}$ una familia de subconjuntos de $X$ **(o sea, $\mathcal{A} \sub \mathcal P(X)$).
+
+{{< orange >}}Def 1.2.{{< /orange >}} Sigma-álgebra
+
+Sea $X$ un conjunto y $\mathcal{A}$ una familia de subconjuntos de $X$ (o sea, $\mathcal{A} \sub \mathcal P(X)$).
 Decimos que $\mathcal A$ es una **$\sigma$-álgebra** si $X \in \mathcal A$ y es cerrada por complementos (respecto a $X$) y por uniones numerables:
 
 1. $X \in \mathcal A$
@@ -167,7 +173,8 @@ Existe una única función $\mu$ de $\mathcal{M}$ en $[0,+\infty]$ tal que:
 
 1. Si $A=(a, b)$, entonces $\mu(A)=b-a$.
 
-2. **Sigma** **Subaditividad**. Si $A_{n} \in \mathcal{M}$ para todo $n \in \mathbb{N}$, entonces
+2. **Sigma** **Subaditividad**. 
+Si $A_{n} \in \mathcal{M}$ para todo $n \in \mathbb{N}$, entonces
    
     $$
     \mu\left(\bigcup_{n \in \mathbb{N}} A_{n}\right) \leq \sum_{n \in \mathbb{N}} \mu\left(A_{n}\right)
@@ -176,7 +183,6 @@ Existe una única función $\mu$ de $\mathcal{M}$ en $[0,+\infty]$ tal que:
     **Sigma adivitidad**. Si los $A_{n}$ son disjuntos dos a dos, entonces
    
     $$
-   
     \mu\left(\bigcup_{n \in \mathbb{N}} A_{n}\right)=\sum_{n \in \mathbb{N}} \mu\left(A_{n}\right)
     $$
 
@@ -262,7 +268,8 @@ Veamos que esta medida se comporta bastante “bien”. Notemos entonces las sig
     \begin{align*}
     A \cup B &= A\setminus B ~\dot\cup~ B \\\\
     \mu(A \cup B) &= \mu(A\setminus B) + \mu(B) \,\text{ por aditividad} \\\\
-    \text{ Si }B\sube  A,\quad A \cup B &= A  \\\mu(A ) &= \mu(A\setminus B) + \mu(B) \quad\text{ como $\mu(B)<\infty$, tiene sentido restar}\\\\
+    \text{ Si }B\sube  A,\quad A \cup B &= A  \\\
+    \mu(A ) &= \mu(A\setminus B) + \mu(B) \quad\text{ como $\mu(B)<\infty$, tiene sentido restar}\\\\
     \mu(A)-\mu(B)&=\mu(A\setminus B) 
     \end{align*}
     $$
@@ -271,16 +278,17 @@ Veamos que esta medida se comporta bastante “bien”. Notemos entonces las sig
   
     $\implies)$ Sea $A$ nulo, entonces $A \in \mathcal M$ y $\mu(A)=0$.
   
-    $A\in \mathcal{M}$ por definición de $\mathcal M$. Ahora, sea $\varepsilon >0,$ como $A$ es nulo: $\exists (U_n)_{n\in\N}$ intervalos abiertos: $A \sube \bigcup_{n} U_n \land \sum_n \operatorname{long}(U_n) < \varepsilon$. Entonces: 
+    $A\in \mathcal{M}$ por definición de $\mathcal M$. Ahora, sea $\varepsilon >0,$ como $A$ es nulo: $\exists (U_n)\_{n\in\N}$ 
+    intervalos abiertos: $A \sube \bigcup_{n} U_n \land \sum_n \operatorname{long}(U_n) < \varepsilon$. 
+    Entonces: 
   
     $$
     \begin{align*}
-    \mu(A) &\leq \mu(\bigcup_n U_n) \quad \text{por monotonía}\\
-    &\leq \sum_n \mu(U_n) \quad\text{por adividad}\\
-    &= \sum_n \operatorname{long}(U_n)<\varepsilon \quad\text{por teo 1.4.1, pues $U_n$ es un intervalo} \\
-    \implies \mu(A) &< \varepsilon \quad\forall \varepsilon >0\\
+    \mu(A) &\leq \mu(\bigcup_n U_n) \quad \text{por monotonía} \\\\
+    &\leq \sum_n \mu(U_n) \quad\text{por adividad} \\\\
+    &= \sum_n \operatorname{long}(U_n)<\varepsilon \quad\text{por teo 1.4.1, pues $U_n$ es un intervalo} \\\\
+    \implies \mu(A) &< \varepsilon \quad\forall \varepsilon >0 \\\\
     \implies \mu(A) &= 0. 
-  
     \end{align*}
     $$
   
@@ -309,9 +317,8 @@ Veamos que esta medida se comporta bastante “bien”. Notemos entonces las sig
      
       $$
       \begin{align*}
-      \nu\left(\bigcup_n A_n \right) &= \mu\left( \lambda + \bigcup_n A_n  \right) \\ &=\mu\left( \bigcup_n  (\lambda +A_n)  \right) \\ 
-      &\leq \sum_n \underbrace{\mu(\lambda+A_n)}_{\nu(A_n)} \quad \text{por subaditividad de la medida} \\ \therefore~ \nu\left(\bigcup_n A_n \right)  &\leq \sum_n \nu(A_n)
-     
+      \nu\left(\bigcup_n A_n \right) &= \mu\left( \lambda + \bigcup_n A_n  \right) \\\\ &=\mu\left( \bigcup_n  (\lambda +A_n)  \right) \\\\ 
+      &\leq \sum_n \underbrace{\mu(\lambda+A_n)}_{\nu(A_n)} \quad \text{por subaditividad de la medida} \\\\ \therefore~ \nu\left(\bigcup_n A_n \right)  &\leq \sum_n \nu(A_n)
       \end{align*}
       $$
      
@@ -326,10 +333,9 @@ Veamos que esta medida se comporta bastante “bien”. Notemos entonces las sig
      
       $$
       \begin{align*}
-      \nu(A) &= \inf\{ \nu(U) : A \sube U \land U \text{ abierto}\} \\\mu(\underbrace{\lambda + A}_{=:B}) &= \inf\{ \mu(\lambda + U) : A \sube U \land U \text{ abierto}\} \\
-     
+      \nu(A) &= \inf\{ \nu(U) : A \sube U \land U \text{ abierto}\} \\\\
+      \mu(\underbrace{\lambda + A}_{=:B}) &= \inf\{ \mu(\lambda + U) : A \sube U \land U \text{ abierto}\} \\\\
       \mu(B) &= \inf\{ \mu(V) :B \sube V\land V \text{ abierto}\}
-     
       \end{align*}
       $$
      
@@ -337,14 +343,15 @@ Veamos que esta medida se comporta bastante “bien”. Notemos entonces las sig
      
       $$
       \begin{align*}
-      \{  A \sube U \land U \text{ abierto}\} &\sim \{ B \sube V\land V \text{ abierto}\} \\ U &\mapsto U+\lambda \\V-\lambda &\gets\!\shortmid V\\
+      \{  A \sube U \land U \text{ abierto}\} &\sim \{ B \sube V\land V \text{ abierto}\} \\\\ U &\mapsto U+\lambda \\\\ V-\lambda &\gets\!\shortmid V \\\\ 
       \therefore \{  A \sube U \land U \text{ abierto}\} &= \{ B \sube V\land V \text{ abierto}\}
       \end{align*}
       $$
 
-📌 **Teorema 1.5. (continuidad de la medida)**
+**Teorema 1.5. (continuidad de la medida)**
 
-Sea $\left\{A_{n}\right\}_{n \in \mathbb{N}} \subset \mathcal{M}$ **tal que *(creciente)* $A_{1} \subset A_{2} \subset A_{3} \cdots \subset A_{n} \ldots$
+Sea $\left\{A_{n}\right\}_{n \in \mathbb{N}} \subset \mathcal{M}$ tal que (creciente) 
+$A_{1} \subset A_{2} \subset A_{3} \cdots \subset A_{n} \ldots$
 Entonces
 
 $$
@@ -352,12 +359,11 @@ $$
 
 $$
 
-Sea $\left\{B_{n}\right\}_{n \in \mathbb{N}} \subset \mathcal{M}$ tal que *(decreciente)* $B_{1} \supset B_{2} \supset B_{3} \cdots \supset B_{n} \ldots$ y supongamos que existe un $n_{0} \in \mathbb{N}$ con $\mu\left(B_{n_{0}}\right)<\infty$.
+Sea $\left\{B_{n}\right\}_{n \in \mathbb{N}} \subset \mathcal{M}$ tal que (decreciente) $B_{1} \supset B_{2} \supset B_{3} \cdots \supset B_{n} \ldots$ y supongamos que existe un $n_{0} \in \mathbb{N}$ con $\mu\left(B_{n_{0}}\right)<\infty$.
 Entonces
 
 $$
 \mu\left(\bigcap_{n \in \mathbb{N}} B_{n}\right)=\lim_{n \rightarrow \infty} \mu\left(B_{n}\right)
-
 $$
 
 - Demostración
@@ -463,7 +469,7 @@ $$
 
 Def. 2.2. Función simple
 
-Una función $f:E \to \R$ se dice **simple medible** si existe una partición de $E$ (medible) **en finitos conjuntos $E_1, \ldots E_N$, todos medibles y números $\alpha_1, \ldots, \alpha_N \in \R$ tales que:
+Una función $f:E \to \R$ se dice **simple medible** si existe una partición de $E$ (medible) en finitos conjuntos $E_1, \ldots E_N$, todos medibles y números $\alpha_1, \ldots, \alpha_N \in \R$ tales que:
 
 $$
 f(x)=\sum_{n=1}^{N} \alpha_{n} \chi_{E_{n}}(x)
@@ -523,7 +529,7 @@ Sea $E$ medible y $f:E\to\overline{\R}$. Son equivalentes.
      Afirmo que $[-\infty, a) = \bigcup_{n\in\N}[-\infty, a-\frac{1}{n}]$, luego si esto vale,
      
      $$
-     f^{-1}([-\infty, a))= f^{-1}\left(\bigcup_{n\in\N}\left[-\infty, a-\frac{1}{n}\right]\right)= \underbrace{\bigcup_{n\in\N}f^{-1} \underbrace{\left[-\infty, a-\frac{1}{n}\right]}_{\text{medible por hipótesis}}}_{\text{medible por unión numerable de med.}}
+     f^{-1}([-\infty, a))= f^{-1}\left(\bigcup_{n\in\N}\left[-\infty, a-\frac{1}{n}\right]\right)= \underbrace{\bigcup_{n\in\N}f^{-1} \underbrace{\left[-\infty, a-\frac{1}{n}\right]}\_{\text{medible por hipótesis}}}\_{\text{medible por unión numerable de med.}}
      $$
      
      Veamos que la afirmación es válida:
@@ -547,7 +553,7 @@ Sea $E$ medible y $f:E\to\overline{\R}$. Son equivalentes.
       Notemos que $[-\infty, a)^c = [a, \infty]$. Luego 
      
       $$
-      f^{-1}([a, \infty]) = f^{-1}([-\infty, a)^c) = \underbrace{E}_{med}\setminus \underbrace{f^{-1}([-\infty, a))}_{\text{med x hip.}}
+      f^{-1}([a, \infty]) = f^{-1}([-\infty, a)^c) = \underbrace{E}\_{med}\setminus \underbrace{f^{-1}([-\infty, a))}\_{\text{med x hip.}}
       $$
      
       Por lo tanto, es medible pues el complemento de un medible es medible.
@@ -562,7 +568,7 @@ Sea $E$ medible y $f:E\to\overline{\R}$. Son equivalentes.
 
 Gráficamente, una función es medible si “manda para atrás” semirrectas a conjuntos medibles. 
 
-![$f$ manda para atrás el intervalo $(a, +\infty]$ a un intervalo en $\R$.](resources/Screenshot_2022-03-01_at_18.28.07.png)
+![](resources/Screenshot_2022-03-01_at_18.28.07.png)
 
 $f$ manda para atrás el intervalo $(a, +\infty]$ a un intervalo en $\R$.
 

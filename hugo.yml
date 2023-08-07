@@ -23,33 +23,7 @@ languages:
     languageDirection: ltr
     languageName: English
     weight: 1
-  es:
-    contentDir: content/es
-    disabled: true
-    languageCode: es
-    languageDirection: ltr
-    languageName: Spanish
-    # params:
-    #   subtitle: Reference, Tutorials, and Explanations
-    # title: Project Documentation
-    weight: 2
-
-
-
-params:
-  math: true
-  defaultTheme: auto
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
-  showtoc: true
-
-
-
-  homeInfoParams:
+    homeInfoParams:
       Title: "Hi there, I'm Noé."
       Content: > 
         Welcome to my website!
@@ -58,6 +32,42 @@ params:
         info about me here as well as some posts and notes 
         I've taken for my classes. You can find my contact information below.
         
+  es:
+    contentDir: content/es
+    disabled: false
+    languageCode: es
+    languageDirection: ltr
+    languageName: Spanish
+    weight: 2
+    homeInfoParams:
+      Title: "Hola, soy Noé."
+      Content: > 
+        Bienvenido a mi sitio.
+
+        Acá vas a encontrar apuntes y notas que tomé sobre temas de Ciencias
+        de Datos, Aprendizaje Automático, Estadística y otros temas más.
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+  env: production
+  assets:
+        disableHLJS: true
+  math: true
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  showtoc: true
+
+
 
   socialIcons: # optional
       - name: twitter
@@ -70,12 +80,16 @@ params:
         url: "https://www.instagram.com/noe_hsueh/"
 
 
-
+pygmentsUseClasses: true
 markup:
+  goldmark:
+        renderer:
+            unsafe: true
   highlight:
+    noClasses: false
     codeFences: true
     guessSyntax: true
     hl_Lines: ""
     lineNoStart: 1
     lineNos: true
-    style: "monokai" # Replace with the style of your choice
+    style: monokai
