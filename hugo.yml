@@ -23,29 +23,27 @@ languages:
     languageDirection: ltr
     languageName: English
     weight: 1
-    homeInfoParams:
-      Title: "Hi there, I'm Noé."
-      Content: > 
-        Welcome to my website!
-
-        I am a Data Sciece student from Argentina. You can find some 
-        info about me here as well as some posts and notes 
-        I've taken for my classes. You can find my contact information below.
-        
+  
   es:
     contentDir: content/es
-    disabled: false
+    disabled: true
     languageCode: es
     languageDirection: ltr
     languageName: Spanish
     weight: 2
-    homeInfoParams:
-      Title: "Hola, soy Noé."
-      Content: > 
-        Bienvenido a mi sitio.
+    
 
-        Acá vas a encontrar apuntes y notas que tomé sobre temas de Ciencias
-        de Datos, Aprendizaje Automático, Estadística y otros temas más.
+
+
+# [language.es.params]
+# homeInfoParams:
+#       Title: "Hola, soy Noé."
+#       Content: > 
+#         Bienvenido a mi sitio.
+
+#         Acá vas a encontrar apuntes y notas que tomé sobre temas de Ciencias
+#         de Datos, Aprendizaje Automático, Estadística y otros temas más.
+      
 
 outputs:
     home:
@@ -66,9 +64,24 @@ params:
   ShowCodeCopyButtons: true
   ShowWordCount: true
   showtoc: true
+  
+  homeInfoParams:
+    Title: "Hi there, I'm Noé."
+    Content: > 
+      Welcome to my website!
 
+      I am a Data Sciece student from Argentina. You can find some 
+      info about me here as well as some posts and notes 
+      I've taken for my classes. You can find my contact information below.
 
+# homeInfoParams:
+#       Title: "Hola, soy Noé."
+#       Content: > 
+#         Bienvenido a mi sitio.
 
+#         Acá vas a encontrar apuntes y notas que tomé sobre temas de Ciencias
+#         de Datos, Aprendizaje Automático, Estadística y otros temas más.
+    
   socialIcons: # optional
       - name: twitter
         url: "https://twitter.com/noe_hsueh"
