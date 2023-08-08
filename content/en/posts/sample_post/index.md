@@ -1,5 +1,5 @@
 ---
-title: "My First Post"
+title: "Sample post"
 date: 2022-08-01T23:39:27-03:00
 draft: false
 ---

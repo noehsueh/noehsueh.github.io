@@ -53,6 +53,10 @@ outputs:
 
 params:
   env: production
+  title: "Noe's website"
+  description: "Noé Hsueh personal website. You can find some 
+      info about me here as well as some posts and notes 
+      I've taken for my classes."
   assets:
         disableHLJS: true
   math: true
@@ -63,6 +67,7 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowWordCount: true
+  hidemeta: false
   showtoc: true
   
   homeInfoParams:
@@ -72,7 +77,7 @@ params:
 
       I am a Data Sciece student from Argentina. You can find some 
       info about me here as well as some posts and notes 
-      I've taken for my classes. You can find my contact information below.
+      I've taken for my classes.
 
 # homeInfoParams:
 #       Title: "Hola, soy Noé."
