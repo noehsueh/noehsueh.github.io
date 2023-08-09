@@ -1,5 +1,5 @@
 ---
-title: "Causal Inference using Bayesian Regression"
+title: "Causal Inference and Gender Pay Gap: A Bayesian Stats Exploration"
 date: 2023-07-04
 draft: false
 ---
