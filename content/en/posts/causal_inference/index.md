@@ -1,11 +1,11 @@
 ---
-title: "Causal Inference using Baysian Regression"
+title: "Causal Inference using Bayesian Regression"
 date: 2023-07-04
 draft: false
 ---
 
 
-This note was taken for a presentation I had to give for my Baysian Stat class. 
+This note was taken for a presentation I had to give for my Bayesian Stat class. 
 
 ## Introduction
 

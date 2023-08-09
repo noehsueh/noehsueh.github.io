@@ -57,6 +57,7 @@ params:
   description: "Noé Hsueh personal website. You can find some 
       info about me here as well as some posts and notes 
       I've taken for my classes."
+  tags: ["personal website", "noe hsueh"]
   assets:
         disableHLJS: true
   math: true
@@ -75,7 +76,7 @@ params:
     Content: > 
       Welcome to my website!
 
-      I am a Data Sciece student from Argentina. You can find some 
+      I am a Data Science student from Argentina. You can find some 
       info about me here as well as some posts and notes 
       I've taken for my classes.
 
