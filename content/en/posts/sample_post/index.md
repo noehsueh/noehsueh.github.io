@@ -1,7 +1,7 @@
 ---
 title: "Sample post"
 date: 2022-08-01T23:39:27-03:00
-draft: false
+draft: true
 ---
 
 
@@ -9,7 +9,6 @@ draft: false
 
 This is **bold** text, and this is *emphasized* text.
 
-Visit the [Hugo](https://gohugo.io) website!
 
 ## Math
 This is a displayed math equation:
