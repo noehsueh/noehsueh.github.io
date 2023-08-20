@@ -2,6 +2,9 @@
 baseURL : 'http://noehsueh.github.io/'
 title : "Noe's website"
 theme: "PaperMod"
+
+enableRobotsTXT: true
+
 menu:
   main:
     - identifier: about
