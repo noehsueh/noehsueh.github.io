@@ -311,3 +311,5 @@ In closing, while technology may have advanced beyond the simple perceptron, its
 7. Araújo, Lucas. "Solving XOR with a single Perceptron." *Towards Data Science.* 2018. https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182#:~:text=The%20book%20Artificial%20Intelligence%3A%20A,of%20learning%20linearly%20separable%20patterns%E2%80%9D.
 
 8. Lefkowitz, Melanie. "Professors' Perceptron Paved Way for AI - 60 Years Too Soon." *Cornell University News*. September 2019. [Professor’s perceptron paved the way for AI – 60 years too soon | Cornell Chronicle](https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon).
+
+9. [Slides for presentation](https://docs.google.com/presentation/d/1n6Y2Pguzr52TrR2T0duegT29CG52-CS9wgmyI4mOn_c/edit?usp=sharing)
