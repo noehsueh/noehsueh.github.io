@@ -5,6 +5,10 @@ theme: "PaperMod"
 
 enableRobotsTXT: true
 
+services:
+  googleAnalytics:
+    ID: G-9PJXLWTS2N
+
 menu:
   main:
     - identifier: about
